@@ -166,51 +166,14 @@ h1{ margin:0 0 8px; font-size:clamp(28px,4.2vw,40px); }
 .tl-E{ color:#6b7280; border-color:#e5e7eb; background:#f8fafc; }
 
 
-/* ---- "Writing" Coming soon 气泡 ---- */
-.site-nav .page-link.soon{
-  position:relative;
-  color:#6b7b65;
-  cursor:default;
-  text-decoration:underline;
-  text-underline-offset:3px;
+/* 顶部导航：用 gap 撑开间距 */
+.site-header .wrapper{ display:flex; align-items:center; justify-content:space-between; }
+.site-nav{ display:flex; gap:28px; align-items:center; }  /* ← 关键：导航间距 */
+.site-nav .page-link{
+  text-decoration:none;
+  color:var(--text);
+  padding-bottom:4px;
+  border-bottom:2px solid transparent;
 }
-.site-nav .page-link.soon:hover{ color:#3d4a38; }
-
-/* 气泡本体 */
-.site-nav .page-link.soon::after{
-  content: attr(data-soon);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 12px);
-  transform: translateX(-50%) translateY(6px);
-  background: #283917;
-  color: #fff;
-  font-weight: 800;
-  padding: 8px 12px;
-  border-radius: 10px;
-  box-shadow: 0 10px 16px rgba(0,0,0,.12);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .15s ease, transform .15s ease;
-}
-/* 小三角 */
-.site-nav .page-link.soon::before{
-  content:"";
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 4px);
-  transform: translateX(-50%);
-  border: 8px solid transparent;
-  border-top-color: #283917;
-  opacity: 0;
-  transition: opacity .15s ease;
-}
-
-.site-nav .page-link.soon:hover::after{
-  opacity: 1; transform: translateX(-50%) translateY(0);
-}
-.site-nav .page-link.soon:hover::before{ opacity: 1; }
-
-
-.site-nav .page-link.soon[aria-disabled="true"]{ pointer-events:auto; }
+.site-nav .page-link:hover,
+.site-nav .page-link.active{ border-bottom-color: var(--accent); }
