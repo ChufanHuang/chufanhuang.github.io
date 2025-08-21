@@ -5,44 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Writing · Chufan Huang</title>
   <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* “Coming soon” 贴纸（顶栏） */
+    .site-nav .page-link.soon{ position:relative; }
+    .site-nav .page-link.soon::after{
+      content:"Coming soon";
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      font-weight:800; font-size:.82rem; color:#fff; background:#23360F;
+      padding:6px 12px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+    .site-nav .page-link.soon::before{
+      content:""; position:absolute; top:14px; left:50%; transform:translateX(-50%) rotate(45deg);
+      width:10px; height:10px; background:#23360F; border-radius:2px;
+    }
+  </style>
 </head>
-
-
-<script>
-
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('.page-link.soon').forEach(a=>{
-      a.addEventListener('click', e => e.preventDefault());
-    });
-  });
-</script>
-
-
 <body>
 
 <header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">Chufan Huang</a>
     <nav class="site-nav">
-      <a class="page-link"
-         href="/">About</a>
-
-      <a class="page-link"
-         href="/experience/">Research experiences</a>
-
-      <a class="page-link"
-         href="/publications/">Publications</a>
-
-      <a class="page-link active"
-         href="/writing/">Writing</a>
+      <!-- 不再用 Liquid 条件，统一用 JS 高亮 -->
+      <a class="page-link" href="/">About</a>
+      <a class="page-link" href="/experience/">Research experiences</a>
+      <a class="page-link" href="/publications/">Publications</a>
+      <a class="page-link soon" href="/writing/">Writing</a>
     </nav>
   </div>
 </header>
 
-
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      <div class="filterbar">
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="filterbar">
   <button class="chip active" data-filter="ALL">All</button>
   <button class="chip" data-filter="essay">Essay</button>
   <button class="chip" data-filter="note">Research Note</button>
@@ -76,14 +72,31 @@
 </script>
 
 
-    </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
-    <div class="wrapper">
-      <small>© 2025 Chufan Huang</small>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="wrapper">
+    <small>© 2025 Chufan Huang</small>
+  </div>
+</footer>
 
+<!-- 放在 body 末尾，避免打断文档结构 -->
+<script>
+  // 阻止“Coming soon”点击
+  document.querySelectorAll('.page-link.soon').forEach(a=>{
+    a.addEventListener('click', e => e.preventDefault());
+  });
+  // 前端根据 URL 给当前链接加 active（避免 Liquid 条件造成的解析问题）
+  (function(){
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('.site-nav .page-link').forEach(a=>{
+      const href = a.getAttribute('href').replace(/\/$/, '');
+      if (href === '' ? path === '' : (href === '/' ? path === '' : path.startsWith(href))){
+        a.classList.add('active');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
