@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Writing · Chufan Huang</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.page-link.soon').forEach(a=>{
+      a.addEventListener('click', e => e.preventDefault());
+    });
+  });
+</script>
+
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper header-flex">
+      <a class="site-title" href="/">Chufan Huang</a>
+      <nav class="site-nav" aria-label="Main">
+        <div class="trigger">
+          
+          
+            <a class="page-link soon" href="/writing/" data-soon="Coming soon" aria-disabled="true">Writing</a>
+               href="/">About</a>
+          
+            <a class="page-link soon" href="/writing/" data-soon="Coming soon" aria-disabled="true">Writing</a>
+               href="/experience/">Research experiences</a>
+          
+            <a class="page-link soon" href="/writing/" data-soon="Coming soon" aria-disabled="true">Writing</a>
+               href="/publications/">Publications</a>
+          
+            <a class="page-link soon" href="/writing/" data-soon="Coming soon" aria-disabled="true">Writing</a>
+               href="/writing/">Writing</a>
+          
+            <a class="page-link soon" href="/writing/" data-soon="Coming soon" aria-disabled="true">Writing</a>
+               href="/assets/pdf/CV_Master.pdf">CV</a>
+          
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="filterbar">
+  <button class="chip active" data-filter="ALL">All</button>
+  <button class="chip" data-filter="essay">Essay</button>
+  <button class="chip" data-filter="note">Research Note</button>
+  <button class="chip" data-filter="reading">Reading</button>
+  <button class="chip" data-filter="zh">中文</button>
+</div>
+
+<ul class="post-list">
+  
+  
+  <li class="post-card" data-cat="note">
+    <h3><a href="/note/2025/03/01/peaks-method-notes/">From Peaks to Trajectories — methods notes</a></h3>
+    <div class="meta">Mar 1, 2025 · Note</div>
+    <p>
+</p>
+  </li>
+  
+</ul>
+
+<script>
+(() => {
+  const btns = document.querySelectorAll('.filterbar .chip');
+  const cards = document.querySelectorAll('.post-card');
+  function apply(cat){
+    btns.forEach(b => b.classList.toggle('active', b.dataset.filter===cat));
+    cards.forEach(c => c.hidden = !(cat==='ALL' || (c.dataset.cat||'').toUpperCase()===cat.toUpperCase()));
+  }
+  btns.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+  apply('ALL');
+})();
+</script>
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <small>© 2025 Chufan Huang</small>
+    </div>
+  </footer>
+
+</body>
+</html>
