@@ -27,16 +27,15 @@ a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }
 .site-header .wrapper{ display:flex; align-items:center; justify-content:space-between; padding:16px 24px; }
 .site-title{ text-decoration:none; font-weight:800; font-family:var(--font-head); }
 
-/* 导航横排 + 当前页下划线（只对导航取消下划线） */
-.site-nav .trigger{ display:flex; gap:24px; align-items:center; }
+
+.site-nav{ display:flex; gap:28px; align-items:center; }
 .site-nav .page-link{
-  text-decoration:none;
-  color:var(--text);
-  padding-bottom:4px;
-  border-bottom:2px solid transparent;
+  text-decoration:none; color:var(--text);
+  padding-bottom:4px; border-bottom:2px solid transparent;
 }
 .site-nav .page-link:hover,
 .site-nav .page-link.active{ border-bottom-color: var(--accent); }
+
 
 /* ================= Typography ================= */
 h1,h2,h3,h4,h5{ font-family:var(--font-head); line-height:1.2; letter-spacing:-0.01em; }
