@@ -319,3 +319,83 @@ nav a.active {
 .site-nav a.active{
   border-bottom-color:var(--accent);
 }
+
+
+/* 主题主色：加粗文本依旧用蓝色 */
+:root { --accent: #005599; }
+.prose strong, .prose b { color: var(--accent); font-weight: 700; }
+
+/* === About 两栏布局 === */
+.about-hero { padding-top: 8px; }
+.about-grid{
+  display: grid;
+  grid-template-columns: 340px minmax(640px, 1fr); /* 左图固定宽，右文自适应 */
+  gap: 36px;
+  align-items: start;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 左侧照片卡片（≈红框大小） */
+.about-photo{ margin: 0; width: 340px; }
+.about-photo img{
+  width: 100%;
+  aspect-ratio: 3 / 4;         /* 纵向比例，自动裁剪 */
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+.about-photo figcaption{
+  text-align: center;
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: .95rem;
+}
+
+/* 右侧文字区（≈蓝框大小） */
+.about-copy{ max-width: 720px; }
+.about-copy h1{ font-size: 3rem; line-height: 1.15; margin: 0 0 .4rem; }
+.about-copy .subtitle{ color:#6b7280; margin: 0 0 1rem; }
+.about-copy p{ margin: 1rem 0; font-size: 1.02rem; line-height: 1.75; }
+
+/* 顶部导航：仅当前项显示蓝色下划线（保持之前设置） */
+.site-nav a{ color:#111 !important; border-bottom:2px solid transparent; padding-bottom:2px; }
+.site-nav a:hover{ border-bottom-color: var(--accent); }
+.site-nav a.active{ border-bottom-color: var(--accent); }
+
+/* 响应式：中屏略收缩，窄屏改为上下布局 */
+@media (max-width: 1100px){
+  .about-grid{ grid-template-columns: 300px 1fr; gap: 28px; }
+  .about-photo{ width: 300px; }
+}
+@media (max-width: 780px){
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-photo{ width: 86%; max-width: 380px; margin: 0 auto 18px; }
+  .about-copy{ max-width: 720px; }
+  .about-copy h1{ font-size: 2.25rem; }
+}
+
+
+/* === About fine-tune v3: photo aligns with body text, not with H1 === */
+
+/* 让头像与正文首段“平行”：把头像整体下移一截（大屏更明显，窄屏不改） */
+.about-photo{
+  margin-top: 96px;           /* 调整这个数值即可：60–92px 都可试 */
+}
+
+/* 中等屏（<=1200px）稍微少一点下移，避免空隙过大 */
+@media (max-width: 1200px){
+  .about-photo{ margin-top: 64px; }
+}
+
+/* 窄屏（栈式布局）不需要偏移 */
+@media (max-width: 780px){
+  .about-photo{ margin-top: 0; }
+}
+
+/* 确保正文块与 H1 左边缘对齐（去掉任何内边距偏移） */
+.about-copy{ padding-left: 0; }
+
+/* 如果你希望正文再略宽一点、右侧空白再少一点，可保留上一次设置的同时再加一点点： */
+.about-copy{ max-width: 1060px; }   /* 原来 940px，可按需要调到 1000px */
