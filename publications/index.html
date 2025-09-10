@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Publications · Chufan Huang</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* “Coming soon” 贴纸（顶栏） */
+    .site-nav .page-link.soon{ position:relative; }
+    .site-nav .page-link.soon::after{
+      content:"Coming soon";
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      font-weight:800; font-size:.82rem; color:#fff; background:#23360F;
+      padding:6px 12px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+    .site-nav .page-link.soon::before{
+      content:""; position:absolute; top:14px; left:50%; transform:translateX(-50%) rotate(45deg);
+      width:10px; height:10px; background:#23360F; border-radius:2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- head 里替换 CSS 引用，给一个时间戳避免缓存 -->
+<link rel="stylesheet" href="/assets/css/main.css?v=1757495841">
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Chufan Huang</a>
+    <nav class="site-nav">
+  <a href="/"
+     class="">About</a>
+
+  <a href="/experience/"
+     class="">Research experiences</a>
+
+  <a href="/publications/"
+     class="active">Publications</a>
+
+  <a href="/writings/"
+     class="">Writings</a>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <h1>Publications</h1>
+<p class="subtitle">Click “Summary” to expand details.</p>
+
+<!-- ===== Conference Proceedings ===== -->
+<h2>Conference Proceedings</h2>
+<div class="pub-list">
+
+  <article class="pub-item">
+    <p class="pub-cite">
+      Huang, C. (2020). <em>Singin’ in the Rain in the Lalaland: A Comparative Analysis of the Narratives in the Musical Film</em>.
+      2nd International Conference on Humanities, Cultures, Arts and Design (ICHCAD 2020).
+      <a href="https://webofproceedings.org/proceedings_series/ART2L/ICHCAD%202020/ZL_2012052.pdf" target="_blank" rel="noopener">[PDF]</a>
+    </p>
+    <details class="pub-summary">
+      <summary>Summary</summary>
+      <div class="pub-body">
+        Conducted a comparative narrative analysis of two iconic musical films, exploring thematic and stylistic
+        continuities and innovations in the genre.
+      </div>
+    </details>
+  </article>
+
+</div>
+
+<!-- ===== Work-in-progress ===== -->
+<h2>Work-in-progress</h2>
+<div class="pub-list">
+
+  <article class="pub-item">
+    <p class="pub-cite">
+      Huang, C., Liberatore, T., Garzonio, E. (2025).
+      <em>Lost in Translation? Exploring Language and Cultural Representation in AI-Generated Political Portraits</em>.
+    </p>
+    <details class="pub-summary">
+      <summary>Summary</summary>
+      <div class="pub-body">
+        Proposed a framework for analyzing how multilingual prompts and cultural cues influence AI-generated political
+        portraits, highlighting the role of model-specific affordances and training data in shaping visual accuracy and
+        symbolic encoding.
+      </div>
+    </details>
+  </article>
+
+  <article class="pub-item">
+    <p class="pub-cite">
+      Huang, C. (2025).
+      <em>Hidden Chilling Effects: How Indirect Senses of Dataveillance Shape Social Media Behavior</em>.
+    </p>
+    <details class="pub-summary">
+      <summary>Summary</summary>
+      <div class="pub-body">
+        Summary coming soon.
+      </div>
+    </details>
+  </article>
+
+</div>
+
+<style>
+/* ===== Publications list ===== */
+.pub-list{ display:grid; gap:18px; margin:10px 0 24px; }
+.pub-item{ border-top:1px solid #eee; padding-top:12px; }
+.pub-cite{ margin:0; }
+
+/* ===== Collapsible Summary (details/summary) ===== */
+.pub-summary{
+  margin-top:6px;
+  border-left:2px solid #e5e7eb;
+  padding-left:10px;
+}
+.pub-summary > summary{
+  list-style:none;
+  cursor:pointer;
+  user-select:none;
+  padding:6px 0;
+  font-weight:700;
+  color:var(--accent);
+  display:flex; align-items:center; gap:6px;
+}
+.pub-summary > summary::-webkit-details-marker{ display:none; }
+
+/* chevron */
+.pub-summary > summary::before{
+  content:"▸";
+  display:inline-block;
+  transform:translateY(-1px);
+  transition:transform .18s ease;
+}
+.pub-summary[open] > summary::before{
+  transform:rotate(90deg) translateY(-1px);
+}
+
+/* body text */
+.pub-body{ padding:2px 0 8px; color:var(--text); }
+</style>
+
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <small>© 2025 Chufan Huang</small>
+  </div>
+</footer>
+
+
+<script>
+  (function(){
+    // 根据 URL 给当前项加 active
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('.site-nav .page-link').forEach(a=>{
+      const href = a.getAttribute('href').replace(/\/$/, '');
+      if (href === '/' ? path === '' : path.startsWith(href)) a.classList.add('active');
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Writings · Chufan Huang</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* “Coming soon” 贴纸（顶栏） */
+    .site-nav .page-link.soon{ position:relative; }
+    .site-nav .page-link.soon::after{
+      content:"Coming soon";
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      font-weight:800; font-size:.82rem; color:#fff; background:#23360F;
+      padding:6px 12px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+    .site-nav .page-link.soon::before{
+      content:""; position:absolute; top:14px; left:50%; transform:translateX(-50%) rotate(45deg);
+      width:10px; height:10px; background:#23360F; border-radius:2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- head 里替换 CSS 引用，给一个时间戳避免缓存 -->
+<link rel="stylesheet" href="/assets/css/main.css?v=1757495841">
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Chufan Huang</a>
+    <nav class="site-nav">
+  <a href="/"
+     class="">About</a>
+
+  <a href="/experience/"
+     class="">Research experiences</a>
+
+  <a href="/publications/"
+     class="">Publications</a>
+
+  <a href="/writings/"
+     class="active">Writings</a>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <h1>Writings</h1>
+
+<div class="callout">New essays are being prepared here. <strong>Coming soon.</strong></div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <small>© 2025 Chufan Huang</small>
+  </div>
+</footer>
+
+
+<script>
+  (function(){
+    // 根据 URL 给当前项加 active
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('.site-nav .page-link').forEach(a=>{
+      const href = a.getAttribute('href').replace(/\/$/, '');
+      if (href === '/' ? path === '' : path.startsWith(href)) a.classList.add('active');
+    });
+  })();
+</script>
+
+</body>
+</html>

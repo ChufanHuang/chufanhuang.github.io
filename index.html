@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About · Chufan Huang</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* “Coming soon” 贴纸（顶栏） */
+    .site-nav .page-link.soon{ position:relative; }
+    .site-nav .page-link.soon::after{
+      content:"Coming soon";
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      font-weight:800; font-size:.82rem; color:#fff; background:#23360F;
+      padding:6px 12px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+    .site-nav .page-link.soon::before{
+      content:""; position:absolute; top:14px; left:50%; transform:translateX(-50%) rotate(45deg);
+      width:10px; height:10px; background:#23360F; border-radius:2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- head 里替换 CSS 引用，给一个时间戳避免缓存 -->
+<link rel="stylesheet" href="/assets/css/main.css?v=1757495841">
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Chufan Huang</a>
+    <nav class="site-nav">
+  <a href="/"
+     class="active">About</a>
+
+  <a href="/experience/"
+     class="">Research experiences</a>
+
+  <a href="/publications/"
+     class="">Publications</a>
+
+  <a href="/writings/"
+     class="">Writings</a>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <section class="hero">
+
+  <figure class="photo">
+    <img src="/assets/img/profile.jpg" alt="Chufan Huang" />
+    <figcaption class="mini-bio mini-bio--compact">
+     <p><a href="mailto:chufan.huang@uzh.ch">chufan.huang@uzh.ch</a></p>
+    </figcaption>
+  </figure>
+
+  <!-- 右侧：标题 + 按钮 + About 正文（放在同一行） -->
+<div class="intro prose">
+  <h1>Chufan Huang</h1>
+  <p class="subtitle">Computational social science — networks, misinformation, human–AI interaction, visual media.</p>
+
+  <p>
+    I’m a master’s student in <strong>Computational Communication</strong> at the
+    <a href="https://www.ikmz.uzh.ch/en.html" target="_blank" rel="noopener">Institute of Communication and Media Research (IKMZ)</a>,
+    <a href="https://www.uzh.ch/en.html" target="_blank" rel="noopener">University of Zurich</a>, with graduate coursework at
+    <a href="https://ethz.ch/en.html" target="_blank" rel="noopener">ETH Zurich</a>.
+    I study <strong>how information flows through platforms</strong> and how <strong>timed interventions</strong>—labels, visual cues, or recommender tweaks—reshape collective attention and individual judgment.
+    A second line of work examines <strong>AI-generated media</strong> as agenda and credibility signals.
+  </p>
+
+  <p>
+    Methodologically, I work <strong>end-to-end with digital traces</strong>. I build time-varying network models
+    (including <strong>ERGMs/SAOMs</strong> and structural-virality measures), apply <strong>NLP/LLMs</strong> and
+    <strong>multimodal embeddings</strong> (e.g., CLIP; UMAP for projections), and use
+    <strong>time-series segmentation/change-point detection</strong> to locate intervention windows.
+    Everything lives in reproducible <strong>Python/R</strong> workflows. Where possible, I layer <strong>virtual/online experiments</strong>
+    and small <strong>field tests</strong> on top of observational pipelines to identify mechanisms and estimate impact.
+  </p>
+
+  <p>
+    Before Zurich, I earned an <strong>M.A. in Journalism &amp; Communication</strong> at
+    <a href="https://en.sisu.edu.cn/" target="_blank" rel="noopener">Sichuan International Studies University</a>,
+    which gave me the theoretical backbone and qualitative depth (mediatization, discourse/CDA, ethnography/interviews, grounded theory).
+  </p>
+
+  <p>
+    In short: my first master’s emphasized <strong>theory and qualitative interpretation</strong>;
+    my current training <strong>scales those questions</strong> into measurable, testable models with language, network, and time-series methods—
+    moving along a <em>traces → models → experiments</em> arc.
+    (<a href="/experience/">See more under “Research experiences.”</a>)
+  </p>
+</div>
+
+</section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <small>© 2025 Chufan Huang</small>
+  </div>
+</footer>
+
+
+<script>
+  (function(){
+    // 根据 URL 给当前项加 active
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('.site-nav .page-link').forEach(a=>{
+      const href = a.getAttribute('href').replace(/\/$/, '');
+      if (href === '/' ? path === '' : path.startsWith(href)) a.classList.add('active');
+    });
+  })();
+</script>
+
+</body>
+</html>

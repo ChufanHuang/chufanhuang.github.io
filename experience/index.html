@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Research experiences · Chufan Huang</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* “Coming soon” 贴纸（顶栏） */
+    .site-nav .page-link.soon{ position:relative; }
+    .site-nav .page-link.soon::after{
+      content:"Coming soon";
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      font-weight:800; font-size:.82rem; color:#fff; background:#23360F;
+      padding:6px 12px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+    .site-nav .page-link.soon::before{
+      content:""; position:absolute; top:14px; left:50%; transform:translateX(-50%) rotate(45deg);
+      width:10px; height:10px; background:#23360F; border-radius:2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- head 里替换 CSS 引用，给一个时间戳避免缓存 -->
+<link rel="stylesheet" href="/assets/css/main.css?v=1757495841">
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Chufan Huang</a>
+    <nav class="site-nav">
+  <a href="/"
+     class="">About</a>
+
+  <a href="/experience/"
+     class="active">Research experiences</a>
+
+  <a href="/publications/"
+     class="">Publications</a>
+
+  <a href="/writings/"
+     class="">Writings</a>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <h1>Research experiences</h1>
+<p class="subtitle">Filter by A–E to explore my projects, seminars and course work. Click any item to see details.</p>
+
+<!-- Filter chips（带文字，替代原 legend） -->
+<div class="filterbar" role="tablist" aria-label="Filter by track">
+  <button class="chip active" data-filter="ALL" role="tab" aria-selected="true">All</button>
+  <button class="chip" data-filter="HL" role="tab">Highlights</button>
+
+  <button class="chip" data-filter="A" role="tab" title="Networked Misinformation &amp; Attention">
+    <span class="badge">A</span><span>Networked Misinformation &amp; Attention</span>
+  </button>
+  <button class="chip" data-filter="B" role="tab" title="Human–AI Interaction">
+    <span class="badge">B</span><span>Human–AI Interaction</span>
+  </button>
+  <button class="chip" data-filter="C" role="tab" title="Visual / Multimodal">
+    <span class="badge">C</span><span>Visual / Multimodal</span>
+  </button>
+  <button class="chip" data-filter="D" role="tab" title="Theory / STS / Surveillance">
+    <span class="badge">D</span><span>Theory / STS / Surveillance</span>
+  </button>
+  <button class="chip" data-filter="E" role="tab" title="Methods &amp; Measurement">
+    <span class="badge">E</span><span>Methods / Measurement</span>
+  </button>
+</div>
+
+<!-- （去掉 legend 块） -->
+
+<h2 id="overview">Track overview</h2>
+<div class="xp-overview" data-built="false"></div>
+
+<!-- Experience list -->
+<div class="xp-list">
+
+  <!-- Thesis (A,E) -->
+  <article class="xp-item" data-tags="A,E" data-primary="A" data-featured="true" data-date="2025.08–2026.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-1">
+      <div class="xp-head">
+        <h3 class="xp-title">From Peaks to Trajectories: Long-Term Evolution of Science-related Conspiracy Theories on Twitter</h3>
+        <div class="xp-meta">2025.08–2026.06 · Master’s Thesis · University of Zurich</div>
+        <div class="xp-tags"><span class="badge">A</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-1" hidden="">
+      <ul class="xp-bullets">
+        <li>111k tweets (2011–2018) to characterize attention regimes (single-peak / cyclical / compound).</li>
+        <li>Domain dictionary for conspiracy clusters (anti-vax, climate denial, etc.).</li>
+        <li>Planned event-coupling tests (cross-correlation; Granger) with policy/science triggers.</li>
+        <li>Compare Issue Attention Cycle with observed non-linear trajectories.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Insights into ChatGPT (B,E) -->
+  <article class="xp-item" data-tags="B,E" data-primary="B" data-featured="true" data-date="2025.02–2025.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-2">
+      <div class="xp-head">
+        <h3 class="xp-title">Insights into User Engagement with ChatGPT</h3>
+        <div class="xp-meta">2025.02–2025.06 · Research Seminar “AI’s Impact on Digital Information Societies” (UZH) · Grade 5.5/6</div>
+        <div class="xp-tags"><span class="badge">B</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-2" hidden="">
+      <ul class="xp-bullets">
+        <li>2,600+ prompts from 589 chats (N=69; 10 languages), linked to survey variables.</li>
+        <li>χ² &amp; Fisher tests for user traits × engagement purposes/topics; mixed-methods coding.</li>
+        <li>Uses &amp; Gratifications / Digital Inequality / trust frameworks.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ETH Network Modeling (E) -->
+  <article class="xp-item" data-tags="E" data-primary="E" data-featured="true" data-date="2024.09–2024.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-3">
+      <div class="xp-head">
+        <h3 class="xp-title">Simulating &amp; Estimating Network Structures and Social Dynamics</h3>
+        <div class="xp-meta">2024.09–2024.12 · Course Project “Network Modeling” (ETH Zurich) · Grade 5.0/6</div>
+        <div class="xp-tags"><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-3" hidden="">
+      <ul class="xp-bullets">
+        <li>Compared ER/WS/BA/Triadic-Closure across 100 sims/model; clustering/diameter/centralization.</li>
+        <li>Estimated SAOMs in <code>RSiena</code>; Jaccard fit, convergence t-ratios, Mahalanobis GOF.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ETH PhD Seminar (A,E) -->
+  <article class="xp-item" data-tags="A,E" data-primary="A" data-date="2024.09–2024.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-4">
+      <div class="xp-head">
+        <h3 class="xp-title">Social Networks, Misinformation &amp; Well-being in the Digital Age</h3>
+        <div class="xp-meta">2024.09–2024.12 · PhD Seminar (ETH Zurich) · Grade 5.75/6</div>
+        <div class="xp-tags"><span class="badge">A</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-4" hidden="">
+      <ul class="xp-bullets">
+        <li>Dual-network design (User–User &amp; User–Content); ERGMs for tie formation.</li>
+        <li>BERT/GPT for emotion states; structural virality &amp; diversity metrics.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- C：Generative AI, Youth Identity… -->
+  <article class="xp-item" data-tags="C" data-primary="C" data-date="2024.09–2024.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-14">
+      <div class="xp-head">
+        <h3 class="xp-title">Generative AI, Youth Identity, and Inequality in Digital Societies</h3>
+        <div class="xp-meta">2024.09–2024.12 · Seminar “Youth and Digital Technologies” (UZH) · Grade 5.5/6</div>
+        <div class="xp-tags"><span class="badge">C</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-14" hidden="">
+      <ul class="xp-bullets">
+        <li>Mixed-methods proposal “Generative AI and Swiss Youth: Shaping Creativity, Identity, and Culture”.</li>
+        <li>National survey (N=1,000) design; Folium map of well-being domains &amp; digital resilience.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- UvA It’s Giving AI (C,E) -->
+  <article class="xp-item" data-tags="C,E" data-primary="C" data-featured="true" data-date="2024.07">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-5">
+      <div class="xp-head">
+        <h3 class="xp-title">It’s Giving AI: Aesthetic Politics &amp; Language Loss in Generative Imagery</h3>
+        <div class="xp-meta">2024.07 · Digital Methods Summer School (University of Amsterdam)</div>
+        <div class="xp-tags"><span class="badge">C</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-5" hidden="">
+       <ul class="xp-bullets">
+        <li>Visual discourse &amp; community mapping (4CAT, Stable Diffusion, HF vision models).</li>
+        <li>Subproject “Concept or Language?” — multilingual prompts distort political portraits.</li>
+        <li>
+        <a class="ext" href="https://www.digitalmethods.net/Dmi/WinterSchool2024ItsGivingAI" target="_blank" rel="noopener">Project page · Digital Methods Summer School</a>
+        </li>
+       </ul>
+      </div>
+  </article>
+
+  <!-- UvA What Do Deepfakes Want? (C) -->
+  <article class="xp-item" data-tags="C" data-primary="C" data-featured="true" data-date="2024.07">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-15">
+      <div class="xp-head">
+        <h3 class="xp-title">What Do Deepfakes Want? Digital Forensic Gaze and Platform Visibility Mapping</h3>
+        <div class="xp-meta">2024.07 · Digital Methods Summer School (University of Amsterdam)</div>
+        <div class="xp-tags"><span class="badge">C</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-15" hidden="">
+     <ul class="xp-bullets">
+      <li>Mapped lifecycle &amp; platform-specific visibility across YouTube/TikTok/Reddit using 4CAT + Gephi.</li>
+      <li>Built a cross-platform visibility matrix to identify affordances that amplify or suppress circulation.</li>
+      <li>
+      <a class="ext" href="https://www.digitalmethods.net/Dmi/SummerSchool2024WhatDoDeepfakesWant" target="_blank" rel="noopener">Project page · Digital Methods Summer School</a>
+      </li>
+     </ul>
+    </div>
+
+  </article>
+
+  <!-- Prompting Science (B,E) -->
+  <article class="xp-item" data-tags="B,E" data-primary="B" data-featured="true" data-date="2024.02–2024.05">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-6">
+      <div class="xp-head">
+        <h3 class="xp-title">Prompting Science: ChatGPT’s Epistemic Authority in Misinformation Contexts</h3>
+        <div class="xp-meta">2024.02–2024.05 · Seminar “Science Communication in the Digital Age” (UZH) · Grade 5.0/6</div>
+        <div class="xp-tags"><span class="badge">B</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-6" hidden="">
+      <ul class="xp-bullets">
+        <li>Prompt experiment (conspiracy vs subtle distortion); 4-part rubric: judgment/credibility/correction/transparency.</li>
+        <li>MAXQDA coding; design strategies for epistemic robustness.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Hidden Chilling Effects (D) -->
+  <article class="xp-item" data-tags="D" data-primary="D" data-featured="true" data-date="2024.02–2024.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-7">
+      <div class="xp-head">
+        <h3 class="xp-title">Hidden Chilling Effects: Youth Responses to Social Media Dataveillance</h3>
+        <div class="xp-meta">2024.02–2024.06 · Research Seminar (UZH) · Grade 4.5/6</div>
+        <div class="xp-tags"><span class="badge">D</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-7" hidden="">
+      <ul class="xp-bullets">
+        <li>Semi-structured interviews (18–28) on platform visibility → self-censorship.</li>
+        <li>Chilling-effects theory; algorithmic personalization; relational privacy.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Study Mediatization in Digital Learning Communities (D) -->
+  <article class="xp-item" data-tags="D" data-primary="D" data-featured="true" data-date="2023.09–2023.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-18">
+      <div class="xp-head">
+        <h3 class="xp-title">Study Mediatization in Digital Learning Communities</h3>
+        <div class="xp-meta">2023.09–2023.12 · Research Seminar “Online Participation and Communities” (UZH) · Grade 5.0/6</div>
+        <div class="xp-tags"><span class="badge">D</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-18" hidden="">
+      <ul class="xp-bullets">
+        <li>Virtual ethnography + semi-structured interviews (N=20) on TIMING (China).</li>
+        <li>Proposed “study mediatization”: visibility, co-regulation, affective presence under platform design.</li>
+        <li>Designed full protocol (recruitment, consent, coding, grounded-theory-inspired analysis).</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Designing Surveillance Studies (D,E) -->
+  <article class="xp-item" data-tags="D,E" data-primary="D" data-featured="true" data-date="2023.09–2023.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-19">
+      <div class="xp-head">
+        <h3 class="xp-title">Designing Surveillance Studies: From the Digital Panopticon to Social Visibility</h3>
+        <div class="xp-meta">2023.09–2023.12 · Research Seminar “Privacy, Dataveillance, and Algorithms on the Internet” (UZH) · Grade 4.5/6</div>
+        <div class="xp-tags"><span class="badge">D</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-19" hidden="">
+      <ul class="xp-bullets">
+        <li>Theory-driven mixed-methods proposal: survey + cross-generational interviews; stratified sampling; regression + thematic analysis.</li>
+        <li>Grounded in Foucault’s panopticism &amp; chilling-effects frameworks; links to AI-mediated visibility &amp; platform nudging.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Machine Learning (E) -->
+  <article class="xp-item" data-tags="E" data-primary="E" data-featured="true" data-date="2024.02–2024.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-16">
+      <div class="xp-head">
+        <h3 class="xp-title">Machine Learning: Social Applications, Model Design, and Ethical Analysis</h3>
+        <div class="xp-meta">2024.02–2024.06 · Theory &amp; Methods (UZH) · Grade 5.0/6</div>
+        <div class="xp-tags"><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-16" hidden="">
+      <ul class="xp-bullets">
+        <li>CNN/LSTM, hate-speech transformers; robustness (FGSM/FGV); end-to-end ML workflows &amp; evaluation.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Designing Ethical AI Literacy Tools (B) -->
+  <article class="xp-item" data-tags="B" data-primary="B" data-featured="true" data-date="2024.02–2024.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-17">
+      <div class="xp-head">
+        <h3 class="xp-title">Designing Ethical AI Literacy Tools through Prompt Engineering</h3>
+        <div class="xp-meta">2024.02–2024.06 · Creative Research Project “Designing Digital Futures” (UZH) · Grade 5.0/6</div>
+        <div class="xp-tags"><span class="badge">B</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-17" hidden="">
+      <ul class="xp-bullets">
+        <li>Public-facing guide to prompt engineering &amp; responsible jailbreaking.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GrannyGame (E) -->
+  <article class="xp-item" data-tags="E" data-primary="E" data-featured="true" data-date="2024.03–2024.05">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-8">
+      <div class="xp-head">
+        <h3 class="xp-title">GrannyGame: Python Arcade for Memory Training</h3>
+        <div class="xp-meta">2024.03–2024.05 · Course Project (UZH)</div>
+        <div class="xp-tags"><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-8" hidden="">
+      <ul class="xp-bullets">
+      <li>Modular 2D game in <code>arcade</code>; OOP mechanics &amp; player classes.</li>
+      <li>
+      <a class="ext" href="https://github.com/ChufanHuang/Group2_Grannygame" target="_blank" rel="noopener">GitHub · ChufanHuang/Group2_Grannygame</a>
+      </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Using LMs for Sentiment (E,A) -->
+  <article class="xp-item" data-tags="E,A" data-primary="A" data-featured="true" data-date="2024.02–2024.03">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-9">
+      <div class="xp-head">
+        <h3 class="xp-title">Using Language Models to Classify Public Sentiment on Social Media</h3>
+        <div class="xp-meta">2024.02–2024.03 · Mini Project (UZH)</div>
+        <div class="xp-tags"><span class="badge">E</span><span class="badge">A</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-9" hidden="">
+      <ul class="xp-bullets">
+        <li>TF–IDF + Logistic Regression vs. transformer models; F1 evaluation.</li>
+        <li>Preprocessing, feature engineering; reflections on bias &amp; interpretability.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Sentiment in TIME (A) -->
+  <article class="xp-item" data-tags="E" data-primary="A" data-featured="true" data-date="2020.03–2020.06">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-11">
+      <div class="xp-head">
+        <h3 class="xp-title">Sentiment in Technology Journalism: A Pilot on <em>TIME</em> Magazine</h3>
+        <div class="xp-meta">2020.03–2020.06 · Research Proposal “Computational Communication / Public Opinion Analysis” · SISU</div>
+        <div class="xp-tags"><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-11" hidden="">
+      <ul class="xp-bullets">
+        <li>English-news sentiment pipeline: scraped <em>TIME</em> tech; polarity/subjectivity with <code>TextBlob</code>.</li>
+        <li>Topic discovery (K-means/LDA) + topic-conditioned sentiment over time.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Study Vlogs (D,E) -->
+  <article class="xp-item" data-tags="D,E" data-primary="D" data-date="2019.09–2019.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-10">
+      <div class="xp-head">
+        <h3 class="xp-title">Study Vlogs as “Learning Spaces”: An Exploratory Inquiry</h3>
+        <div class="xp-meta">2019.09–2019.12 · Course Paper “Journalism Theory” · SISU</div>
+        <div class="xp-tags"><span class="badge">D</span><span class="badge">E</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-10" hidden="">
+      <ul class="xp-bullets">
+        <li>Participatory-culture &amp; impression-management lenses for study-vlog communities.</li>
+        <li>Virtual ethnography; full-corpus coding in <code>NVivo</code> (open/axial).</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- HuffPost (D) -->
+  <article class="xp-item" data-tags="D" data-primary="D" data-date="2019.09–2019.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-12">
+      <div class="xp-head">
+        <h3 class="xp-title">The First “Internet Newspaper”: Fifteen Years of <em>The Huffington Post</em></h3>
+        <div class="xp-meta">2019.09–2019.12 · Course Paper “History of Chinese and Foreign Journalism” · SISU</div>
+        <div class="xp-tags"><span class="badge">D</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-12" hidden="">
+      <ul class="xp-bullets">
+        <li>From “blog + aggregation” to social news &amp; citizen journalism; AOL acquisition &amp; international expansion.</li>
+        <li>Platform strategy &amp; governance tensions through media-convergence lens.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Singin’ in the Rain vs La La Land (C) -->
+  <article class="xp-item" data-tags="C" data-primary="C" data-date="2019.10–2019.12">
+    <button class="xp-toggle" aria-expanded="false" aria-controls="xp-13">
+      <div class="xp-head">
+        <h3 class="xp-title"><em>Singin’ in the Rain</em> vs. <em>La La Land</em>: Narrative Themes and Spatial Construction</h3>
+        <div class="xp-meta">2019.10–2019.12 · Course Paper “Film &amp; Narrative Studies” · SISU</div>
+        <div class="xp-tags"><span class="badge">C</span></div>
+      </div>
+      <span class="xp-chev" aria-hidden="true">▸</span>
+    </button>
+    <div class="xp-panel" id="xp-13" hidden="">
+      <ul class="xp-bullets">
+        <li>“Dream/romance vs. reality” arcs; coupling of musical set-pieces with narrative propulsion.</li>
+        <li>Narrative spaces（backstage, city, observatory,long takes, montage, dissolve）。</li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+<p><!-- /.xp-list --></p>
+
+<!-- Page JS -->
+<script>
+(function(){
+  // ===== Filter logic =====
+  const chips = document.querySelectorAll('.filterbar .chip');
+  const items = document.querySelectorAll('.xp-item');
+
+  function applyFilter(tag){
+    const T = tag.toUpperCase();
+    chips.forEach(b => b.classList.toggle('active', b.dataset.filter === T));
+    items.forEach(el => {
+      if (T === 'ALL'){
+        el.hidden = false;
+      } else if (T === 'HL'){ // highlights
+        el.hidden = el.dataset.featured !== 'true';
+      } else {
+        const tags = (el.dataset.tags || '').split(',').map(s => s.trim().toUpperCase());
+        el.hidden = !tags.includes(T);
+      }
+    });
+    // sync URL hash
+    const base = location.pathname + location.search;
+    history.replaceState(null, '', T === 'ALL' ? base : base + '#' + T);
+    buildOverview(T);
+  }
+  chips.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter)));
+
+  // ===== Accordions =====
+  document.querySelectorAll('.xp-toggle').forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+      const chev = btn.querySelector('.xp-chev');
+      if (chev) chev.style.transform = open ? 'rotate(0deg)' : 'rotate(90deg)';
+    });
+  });
+
+  // ===== Timeline Overview =====
+  const box = document.querySelector('.xp-overview');
+  const allMeta = Array.from(document.querySelectorAll('.xp-item')).map((el, i) => {
+    const id    = el.querySelector('.xp-toggle')?.getAttribute('aria-controls') || ('xp-'+(i+1));
+    const title = el.querySelector('.xp-title')?.textContent.trim() || 'Untitled';
+    const date  = el.dataset.date || (el.querySelector('.xp-meta')?.textContent.match(/\d{4}\.\d{2}(?:\s*[\u2013\-–]\s*\d{4}\.\d{2})?/)||[''])[0] || '';
+    const star  = el.dataset.featured === 'true';
+    const tags  = (el.dataset.tags || '').split(',').map(s => s.trim().toUpperCase()).filter(Boolean);
+    let primary = (el.dataset.primary || '').toUpperCase();
+    const ORDER = ['A','B','C','D','E'];
+    if (!ORDER.includes(primary)) primary = tags.find(t=>ORDER.includes(t)) || 'E';
+    const m = date.match(/(\d{4})\.(\d{2})/);
+    const key = m ? (parseInt(m[1],10)*12 + parseInt(m[2],10)) : -1;
+    return { id, title, date, star, tags, primary, key };
+  });
+
+  function buildOverview(filterTag){
+    const T = (filterTag||'ALL').toUpperCase();
+    const list = allMeta
+      .filter(it => T==='ALL' ? true : (T==='HL' ? it.star : it.tags.includes(T)))
+      .sort((a,b)=> b.key - a.key);
+
+    const titleSuffix = T==='ALL' ? '' : (T==='HL' ? ' — Highlights' : ` — ${T}`);
+    box.innerHTML = `
+      <div class="tl-head">Timeline${titleSuffix}</div>
+      <div class="timeline">
+        ${list.map(it => `
+          <div class="tl-item">
+            <a href="#${it.id}" data-open="${it.id}">
+              ${it.date ? it.date + '｜' : ''}${it.star ? '<span class="star">★</span> ' : ''}${it.title}
+            </a>
+          </div>
+        `).join('')}
+      </div>
+      <div class="ov-tail">（${T==='ALL' ? 'All' : (T==='HL' ? 'Highlight' : T)}  ${list.length} entries）</div>
+    `;
+  }
+
+  // jump & open from timeline
+  box.addEventListener('click', e=>{
+    const a = e.target.closest('a[data-open]');
+    if(!a) return;
+    e.preventDefault();
+    const id = a.dataset.open;
+    const btn   = document.querySelector(`.xp-toggle[aria-controls="${id}"]`);
+    const panel = document.getElementById(id);
+    if(btn && panel){
+      if (btn.getAttribute('aria-expanded') !== 'true'){
+        btn.setAttribute('aria-expanded','true');
+        panel.hidden = false;
+        const chev = btn.querySelector('.xp-chev');
+        if (chev) chev.style.transform = 'rotate(90deg)';
+      }
+      panel.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+
+  // init
+  applyFilter((location.hash || '#ALL').replace('#',''));
+})();
+</script>
+
+<style>
+/* ===== Filter chips ===== */
+.filterbar{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 8px}
+
+/* 先为每个按钮映射一个主题色（不改其它结构） */
+.chip[data-filter="ALL"]{ --chip-color: var(--accent); }   /* All 用站点主蓝 */
+.chip[data-filter="HL"] { --chip-color: #b45309; }         /* Highlights 琥珀橙 */
+.chip[data-filter="A"]  { --chip-color: #0b5cab; }         /* A  蓝 */
+.chip[data-filter="B"]  { --chip-color: #0b7a6e; }         /* B  青绿 */
+.chip[data-filter="C"]  { --chip-color: #7a3e9d; }         /* C  紫 */
+.chip[data-filter="D"]  { --chip-color: #934c2e; }         /* D  棕 */
+.chip[data-filter="E"]  { --chip-color: #6b7280; }         /* E  灰 */
+
+/* 按钮基础样式——颜色来自各自的 --chip-color */
+.chip{
+  appearance:none; display:inline-flex; align-items:center; gap:8px;
+  border:2px solid var(--chip-color, var(--accent));
+  color:var(--chip-color, var(--accent));
+  background:#fff;
+  padding:8px 14px; border-radius:9999px; font-weight:700; cursor:pointer;
+  line-height:1; transition:all .15s ease;
+}
+.chip:hover{ filter:brightness(.98); }
+
+/* 按钮里的字母徽标也跟随各自颜色（未激活态） */
+.chip .badge{
+  display:inline-block; min-width:1.6em; text-align:center;
+  border-radius:6px; padding:2px 6px; font-weight:800; font-size:.85rem;
+  border:1px solid #d1d5db; background:#f8fafc;
+  color:var(--chip-color, #374151);
+}
+
+/* 激活态：实心色块，文字反白，徽标反白描边 */
+.chip.active{
+  background:var(--chip-color, var(--accent));
+  border-color:var(--chip-color, var(--accent));
+  color:#fff;
+}
+.chip.active .badge{
+  background:#fff; border-color:#fff; color:var(--chip-color, var(--accent));
+}
+
+
+/* Experience list + accordion */
+.xp-list{display:grid;gap:18px;margin-top:8px}
+.xp-item{border-top:1px solid #eee;padding-top:12px}
+.xp-toggle{all:unset; display:flex; align-items:flex-start; justify-content:space-between;
+  gap:14px; width:100%; cursor:pointer; padding:10px 0; border-radius:10px;}
+.xp-toggle:hover .xp-title{ text-decoration:underline; text-underline-offset:3px; }
+.xp-head{display:grid; gap:4px}
+.xp-title{margin:0}
+.xp-meta{font-size:0.95rem;color:#6b7280}
+.xp-tags{display:flex;gap:6px;margin-top:4px}
+.xp-tags .badge{min-width:1.6em;text-align:center;border-radius:6px;padding:2px 6px;font-weight:800;border:1px solid #d1d5db;background:#f8fafc}
+.xp-chev{transition:transform .18s ease;margin-top:4px}
+.xp-panel{padding:6px 0 2px 8px;margin-left:8px;border-left:2px solid #e5e7eb}
+.xp-bullets{margin:0; padding-left:18px}
+.xp-bullets li{margin:4px 0}
+
+/* ===== Timeline Overview ===== */
+.xp-overview{ margin:10px 0 0; }
+.tl-head{ font-weight:700; margin:6px 0 8px; }
+.timeline{ position:relative; padding-left:18px; margin:6px 0 2px; }
+.timeline::before{ content:""; position:absolute; left:6px; top:2px; bottom:2px; width:2px; background:#e5e7eb; }
+.tl-item{ position:relative; margin:8px 0; line-height:1.6; }
+.tl-item::before{ content:none !important; }
+.tl-item a{ text-decoration:none; }
+.tl-item a:hover{ text-decoration:underline; text-underline-offset:3px; }
+.timeline .star{ margin-right:2px; }
+.ov-tail{ color:#6b7280; margin-top:6px; }
+
+/* Mobile */
+@media (max-width:760px){
+  .chip{padding:7px 12px}
+  .xp-meta{font-size:0.9rem}
+}
+</style>
+
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <small>© 2025 Chufan Huang</small>
+  </div>
+</footer>
+
+
+<script>
+  (function(){
+    // 根据 URL 给当前项加 active
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('.site-nav .page-link').forEach(a=>{
+      const href = a.getAttribute('href').replace(/\/$/, '');
+      if (href === '/' ? path === '' : path.startsWith(href)) a.classList.add('active');
+    });
+  })();
+</script>
+
+</body>
+</html>
