@@ -399,3 +399,26 @@ nav a.active {
 
 /* 如果你希望正文再略宽一点、右侧空白再少一点，可保留上一次设置的同时再加一点点： */
 .about-copy{ max-width: 1060px; }   /* 原来 940px，可按需要调到 1000px */
+
+
+/* === About fine-tune v4: smaller photo, wider text === */
+.about-grid{
+  grid-template-columns: 260px minmax(800px, 1fr); /* 左列更小 + 右列更宽 */
+  max-width: 1200px;                               /* 整体再放宽，减少右侧空白 */
+  gap: 26px;                                       /* 图文间距依然清晰 */
+}
+.about-photo{ width: 260px; }                       /* 原来 260/280 → 220 */
+.about-copy{ max-width: 900px; }                   /* 原来 ~940–980 → 1040 */
+
+/* 中等屏时略收一点，避免行长过长 */
+@media (max-width: 1200px){
+  .about-grid{
+    grid-template-columns: 210px minmax(780px, 1fr);
+    max-width: 1200px;
+    gap: 48px;
+  }
+  .about-photo{ width: 210px; }
+  .about-copy{ max-width: 920px; }
+}
+
+/* 你之前的 .about-photo margin-top / margin-left 调整保持不变 */
