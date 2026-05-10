@@ -422,3 +422,6 @@ nav a.active {
 }
 
 /* 你之前的 .about-photo margin-top / margin-left 调整保持不变 */
+
+
+.ref sup{ cursor: default; }
